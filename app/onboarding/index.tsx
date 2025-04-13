@@ -11,14 +11,14 @@ export default function OnboardingScreen() {
       <View style={styles.imageContainer}>
         {/* Placeholder for illustration - replace with actual image */}
         <View style={styles.imagePlaceholder}>
-          <Text style={styles.imagePlaceholderText}>App Logo</Text>
+          <Text style={styles.imagePlaceholderText}>Logo Aplikasi</Text>
         </View>
       </View>
       
       <View style={styles.contentContainer}>
-        <Text style={styles.title}>Welcome to BMT Fatihul Barokah</Text>
+        <Text style={styles.title}>Selamat Datang di BMT Fatihul Barokah</Text>
         <Text style={styles.subtitle}>
-          Manage your savings, loans, and financial information with ease
+          Kelola tabungan, pembiayaan, dan informasi keuangan Anda dengan mudah
         </Text>
       </View>
       
@@ -26,7 +26,7 @@ export default function OnboardingScreen() {
         style={styles.button}
         onPress={() => router.push('/onboarding/phone-verification')}
       >
-        <Text style={styles.buttonText}>Continue</Text>
+        <Text style={styles.buttonText}>Lanjutkan</Text>
       </TouchableOpacity>
     </View>
   );

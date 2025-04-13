@@ -9,12 +9,12 @@ export default function PhoneVerificationScreen() {
 
   const handleContinue = () => {
     if (!phoneNumber.trim()) {
-      Alert.alert('Error', 'Please enter your phone number');
+      Alert.alert('Error', 'Mohon masukkan nomor telepon Anda');
       return;
     }
 
     if (!verificationMethod) {
-      Alert.alert('Error', 'Please select a verification method');
+      Alert.alert('Error', 'Mohon pilih metode verifikasi');
       return;
     }
 
@@ -32,29 +32,29 @@ export default function PhoneVerificationScreen() {
       
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backButton}>← Back</Text>
+          <Text style={styles.backButton}>← Kembali</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Phone Verification</Text>
+        <Text style={styles.headerTitle}>Verifikasi Nomor Telepon</Text>
       </View>
       
       <View style={styles.content}>
-        <Text style={styles.title}>Enter your phone number</Text>
+        <Text style={styles.title}>Masukkan nomor telepon Anda</Text>
         <Text style={styles.subtitle}>
-          We'll send a verification code to confirm your identity
+          Kami akan mengirimkan kode verifikasi untuk mengkonfirmasi identitas Anda
         </Text>
         
         <View style={styles.inputContainer}>
-          <Text style={styles.inputLabel}>Phone Number</Text>
+          <Text style={styles.inputLabel}>Nomor Telepon</Text>
           <TextInput
             style={styles.input}
-            placeholder="e.g., 08123456789"
+            placeholder="contoh: 08123456789"
             keyboardType="phone-pad"
             value={phoneNumber}
             onChangeText={setPhoneNumber}
           />
         </View>
         
-        <Text style={styles.methodLabel}>Select verification method:</Text>
+        <Text style={styles.methodLabel}>Pilih metode verifikasi:</Text>
         <View style={styles.methodContainer}>
           <TouchableOpacity 
             style={[
@@ -96,7 +96,7 @@ export default function PhoneVerificationScreen() {
         style={styles.continueButton}
         onPress={handleContinue}
       >
-        <Text style={styles.continueButtonText}>Continue</Text>
+        <Text style={styles.continueButtonText}>Lanjutkan</Text>
       </TouchableOpacity>
     </View>
   );

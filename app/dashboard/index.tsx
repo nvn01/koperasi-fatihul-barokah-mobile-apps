@@ -74,7 +74,7 @@ export default function DashboardScreen() {
         
         <View style={styles.lastUpdateContainer}>
           <Text style={styles.lastUpdateText}>
-            Last updated: 12/04/2025 15:00
+            Terakhir diperbarui: 12/04/2025 15:00
           </Text>
         </View>
       </View>
@@ -82,24 +82,24 @@ export default function DashboardScreen() {
       <ScrollView style={styles.content}>
         <View style={styles.balanceSection}>
           <View style={styles.balanceCard}>
-            <Text style={styles.balanceLabel}>Savings Balance</Text>
+            <Text style={styles.balanceLabel}>Saldo Tabungan</Text>
             <Text style={styles.balanceAmount}>{formatCurrency(accountBalance)}</Text>
             <TouchableOpacity style={styles.viewDetailsButton}>
-              <Text style={styles.viewDetailsText}>View Details</Text>
+              <Text style={styles.viewDetailsText}>Lihat Detail</Text>
             </TouchableOpacity>
           </View>
           
           <View style={styles.balanceCard}>
-            <Text style={styles.balanceLabel}>Loan Balance</Text>
+            <Text style={styles.balanceLabel}>Saldo Pembiayaan</Text>
             <Text style={styles.balanceAmount}>{formatCurrency(loanBalance)}</Text>
             <TouchableOpacity style={styles.viewDetailsButton}>
-              <Text style={styles.viewDetailsText}>View Details</Text>
+              <Text style={styles.viewDetailsText}>Lihat Detail</Text>
             </TouchableOpacity>
           </View>
         </View>
         
         <View style={styles.quickActionsSection}>
-          <Text style={styles.sectionTitle}>Quick Actions</Text>
+          <Text style={styles.sectionTitle}>Aksi Cepat</Text>
           
           <View style={styles.quickActionsGrid}>
             <TouchableOpacity style={styles.quickActionItem}>
@@ -113,30 +113,30 @@ export default function DashboardScreen() {
               <View style={styles.quickActionIcon}>
                 <Text style={styles.quickActionIconText}>📝</Text>
               </View>
-              <Text style={styles.quickActionText}>Payment</Text>
+              <Text style={styles.quickActionText}>Pembayaran</Text>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.quickActionItem}>
               <View style={styles.quickActionIcon}>
                 <Text style={styles.quickActionIconText}>📊</Text>
               </View>
-              <Text style={styles.quickActionText}>History</Text>
+              <Text style={styles.quickActionText}>Riwayat</Text>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.quickActionItem}>
               <View style={styles.quickActionIcon}>
                 <Text style={styles.quickActionIconText}>🏦</Text>
               </View>
-              <Text style={styles.quickActionText}>Loan</Text>
+              <Text style={styles.quickActionText}>Pembiayaan</Text>
             </TouchableOpacity>
           </View>
         </View>
         
         <View style={styles.transactionsSection}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>Recent Transactions</Text>
+            <Text style={styles.sectionTitle}>Transaksi Terbaru</Text>
             <TouchableOpacity>
-              <Text style={styles.seeAllText}>See All</Text>
+              <Text style={styles.seeAllText}>Lihat Semua</Text>
             </TouchableOpacity>
           </View>
           
@@ -160,21 +160,21 @@ export default function DashboardScreen() {
         </View>
         
         <View style={styles.announcementsSection}>
-          <Text style={styles.sectionTitle}>Announcements</Text>
+          <Text style={styles.sectionTitle}>Pengumuman</Text>
           
           <View style={styles.announcementCard}>
-            <Text style={styles.announcementTitle}>Office Closed for Eid</Text>
+            <Text style={styles.announcementTitle}>Kantor Tutup untuk Idul Fitri</Text>
             <Text style={styles.announcementDate}>10 Apr 2025</Text>
             <Text style={styles.announcementContent}>
-              Our office will be closed from April 15-18, 2025 for Eid al-Fitr. Normal operations will resume on April 19, 2025.
+              Kantor kami akan tutup dari tanggal 15-18 April 2025 untuk Idul Fitri. Operasional normal akan dilanjutkan pada tanggal 19 April 2025.
             </Text>
           </View>
           
           <View style={styles.announcementCard}>
-            <Text style={styles.announcementTitle}>New Financing Program</Text>
+            <Text style={styles.announcementTitle}>Program Pembiayaan Baru</Text>
             <Text style={styles.announcementDate}>05 Apr 2025</Text>
             <Text style={styles.announcementContent}>
-              We're launching a new micro-business financing program with competitive rates. Visit our office for more information.
+              Kami meluncurkan program pembiayaan usaha mikro baru dengan margin kompetitif. Kunjungi kantor kami untuk informasi lebih lanjut.
             </Text>
           </View>
         </View>
@@ -183,22 +183,22 @@ export default function DashboardScreen() {
       <View style={styles.navbar}>
         <TouchableOpacity style={styles.navItem}>
           <Text style={[styles.navIcon, styles.activeNavIcon]}>🏠</Text>
-          <Text style={[styles.navText, styles.activeNavText]}>Home</Text>
+          <Text style={[styles.navText, styles.activeNavText]}>Beranda</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.navItem}>
           <Text style={styles.navIcon}>💼</Text>
-          <Text style={styles.navText}>Accounts</Text>
+          <Text style={styles.navText}>Rekening</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.navItem}>
           <Text style={styles.navIcon}>🔔</Text>
-          <Text style={styles.navText}>Notifications</Text>
+          <Text style={styles.navText}>Notifikasi</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.navItem}>
           <Text style={styles.navIcon}>👤</Text>
-          <Text style={styles.navText}>Profile</Text>
+          <Text style={styles.navText}>Profil</Text>
         </TouchableOpacity>
       </View>
     </View>
