@@ -18,21 +18,21 @@ export default function RegistrationCompleteScreen() {
           <Text style={styles.successIcon}>✓</Text>
         </View>
         
-        <Text style={styles.title}>Registration Complete!</Text>
+        <Text style={styles.title}>Pendaftaran Selesai!</Text>
         <Text style={styles.subtitle}>
-          Your account has been successfully created. You can now access your financial information and services.
+          Akun Anda telah berhasil dibuat. Anda sekarang dapat mengakses informasi dan layanan keuangan Anda.
         </Text>
         
         <View style={styles.infoContainer}>
-          <Text style={styles.infoTitle}>Important Information</Text>
+          <Text style={styles.infoTitle}>Informasi Penting</Text>
           <Text style={styles.infoText}>
-            • Your account data is updated daily at 3 PM
+            • Data akun Anda diperbarui setiap hari pukul 15.00
           </Text>
           <Text style={styles.infoText}>
-            • Transactions after 3 PM will be reflected the next day
+            • Transaksi setelah pukul 15.00 akan tercermin pada hari berikutnya
           </Text>
           <Text style={styles.infoText}>
-            • Keep your PIN secure and do not share it with anyone
+            • Jaga keamanan PIN Anda dan jangan bagikan dengan siapapun
           </Text>
         </View>
       </View>
@@ -41,7 +41,7 @@ export default function RegistrationCompleteScreen() {
         style={styles.dashboardButton}
         onPress={handleGoToDashboard}
       >
-        <Text style={styles.dashboardButtonText}>Go to Dashboard</Text>
+        <Text style={styles.dashboardButtonText}>Ke Dashboard</Text>
       </TouchableOpacity>
     </View>
   );

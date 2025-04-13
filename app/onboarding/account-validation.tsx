@@ -9,12 +9,12 @@ export default function AccountValidationScreen() {
 
   const handleValidate = () => {
     if (!fullName.trim()) {
-      Alert.alert('Error', 'Please enter your full name');
+      Alert.alert('Error', 'Mohon masukkan nama lengkap Anda');
       return;
     }
 
     if (!accountNumber.trim()) {
-      Alert.alert('Error', 'Please enter your account number');
+      Alert.alert('Error', 'Mohon masukkan nomor rekening Anda');
       return;
     }
 
@@ -34,32 +34,32 @@ export default function AccountValidationScreen() {
       
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backButton}>← Back</Text>
+          <Text style={styles.backButton}>← Kembali</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Account Validation</Text>
+        <Text style={styles.headerTitle}>Validasi Akun</Text>
       </View>
       
       <View style={styles.content}>
-        <Text style={styles.title}>Validate your account</Text>
+        <Text style={styles.title}>Validasi akun Anda</Text>
         <Text style={styles.subtitle}>
-          Please enter your full name exactly as registered with the cooperative and your account number
+          Mohon masukkan nama lengkap Anda sesuai dengan yang terdaftar di koperasi dan nomor rekening Anda
         </Text>
         
         <View style={styles.inputContainer}>
-          <Text style={styles.inputLabel}>Full Name</Text>
+          <Text style={styles.inputLabel}>Nama Lengkap</Text>
           <TextInput
             style={styles.input}
-            placeholder="Enter your full name"
+            placeholder="Masukkan nama lengkap Anda"
             value={fullName}
             onChangeText={setFullName}
           />
         </View>
         
         <View style={styles.inputContainer}>
-          <Text style={styles.inputLabel}>Account Number</Text>
+          <Text style={styles.inputLabel}>Nomor Rekening</Text>
           <TextInput
             style={styles.input}
-            placeholder="Enter your account number"
+            placeholder="Masukkan nomor rekening Anda"
             keyboardType="number-pad"
             value={accountNumber}
             onChangeText={setAccountNumber}
@@ -68,7 +68,7 @@ export default function AccountValidationScreen() {
         
         <View style={styles.infoContainer}>
           <Text style={styles.infoText}>
-            Note: The system validates against data updated daily at 3 PM. Transactions after this time will be reflected the next day.
+            Catatan: Sistem memvalidasi data yang diperbarui setiap hari pukul 15.00. Transaksi setelah waktu ini akan tercermin pada hari berikutnya.
           </Text>
         </View>
       </View>
@@ -78,7 +78,7 @@ export default function AccountValidationScreen() {
           style={styles.validateButton}
           onPress={handleValidate}
         >
-          <Text style={styles.validateButtonText}>Validate Account</Text>
+          <Text style={styles.validateButtonText}>Validasi Akun</Text>
         </TouchableOpacity>
         
         <TouchableOpacity 

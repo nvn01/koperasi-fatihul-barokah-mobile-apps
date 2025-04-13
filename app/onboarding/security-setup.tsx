@@ -73,8 +73,8 @@ export default function SecuritySetupScreen() {
         }, 300);
       } else {
         Alert.alert(
-          'PIN Mismatch',
-          'The PINs you entered do not match. Please try again.',
+          'PIN Tidak Cocok',
+          'PIN yang Anda masukkan tidak cocok. Silakan coba lagi.',
           [
             {
               text: 'OK',
@@ -96,19 +96,19 @@ export default function SecuritySetupScreen() {
       
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backButton}>← Back</Text>
+          <Text style={styles.backButton}>← Kembali</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Security Setup</Text>
+        <Text style={styles.headerTitle}>Pengaturan Keamanan</Text>
       </View>
       
       <View style={styles.content}>
         <Text style={styles.title}>
-          {step === 'create' ? 'Create your PIN' : 'Confirm your PIN'}
+          {step === 'create' ? 'Buat PIN Anda' : 'Konfirmasi PIN Anda'}
         </Text>
         <Text style={styles.subtitle}>
           {step === 'create' 
-            ? 'Create a 6-digit PIN to secure your account'
-            : 'Please re-enter your PIN to confirm'
+            ? 'Buat PIN 6 digit untuk mengamankan akun Anda'
+            : 'Silakan masukkan kembali PIN Anda untuk konfirmasi'
           }
         </Text>
         
@@ -133,7 +133,7 @@ export default function SecuritySetupScreen() {
         
         <View style={styles.infoContainer}>
           <Text style={styles.infoText}>
-            Your PIN will be used to secure your account and authorize transactions.
+            PIN Anda akan digunakan untuk mengamankan akun dan mengotorisasi transaksi.
           </Text>
         </View>
       </View>

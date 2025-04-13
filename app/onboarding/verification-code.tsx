@@ -59,14 +59,14 @@ export default function VerificationCodeScreen() {
     setCanResend(false);
     
     // In a real app, we would resend the verification code here
-    Alert.alert('Code Resent', `A new verification code has been sent via ${method}`);
+    Alert.alert('Kode Terkirim', `Kode verifikasi baru telah dikirim melalui ${method === 'whatsapp' ? 'WhatsApp' : 'SMS'}`);
   };
   
   const handleVerify = () => {
     const fullCode = code.join('');
     
     if (fullCode.length !== 6) {
-      Alert.alert('Error', 'Please enter the complete 6-digit code');
+      Alert.alert('Error', 'Mohon masukkan kode 6 digit lengkap');
       return;
     }
     
@@ -81,15 +81,15 @@ export default function VerificationCodeScreen() {
       
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <Text style={styles.backButton}>← Back</Text>
+          <Text style={styles.backButton}>← Kembali</Text>
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Verification Code</Text>
+        <Text style={styles.headerTitle}>Kode Verifikasi</Text>
       </View>
       
       <View style={styles.content}>
-        <Text style={styles.title}>Enter verification code</Text>
+        <Text style={styles.title}>Masukkan kode verifikasi</Text>
         <Text style={styles.subtitle}>
-          We've sent a 6-digit code to {phoneNumber} via {method === 'whatsapp' ? 'WhatsApp' : 'SMS'}
+          Kami telah mengirim kode 6 digit ke {phoneNumber} melalui {method === 'whatsapp' ? 'WhatsApp' : 'SMS'}
         </Text>
         
         <View style={styles.codeContainer}>
@@ -111,13 +111,13 @@ export default function VerificationCodeScreen() {
         <View style={styles.resendContainer}>
           <Text style={styles.resendText}>
             {canResend 
-              ? "Didn't receive the code?" 
-              : `Resend code in ${timeLeft}s`
+              ? "Tidak menerima kode?" 
+              : `Kirim ulang kode dalam ${timeLeft}d`
             }
           </Text>
           {canResend && (
             <TouchableOpacity onPress={handleResendCode}>
-              <Text style={styles.resendButton}>Resend Code</Text>
+              <Text style={styles.resendButton}>Kirim Ulang Kode</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -127,7 +127,7 @@ export default function VerificationCodeScreen() {
         style={styles.verifyButton}
         onPress={handleVerify}
       >
-        <Text style={styles.verifyButtonText}>Verify</Text>
+        <Text style={styles.verifyButtonText}>Verifikasi</Text>
       </TouchableOpacity>
     </View>
   );

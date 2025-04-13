@@ -9,7 +9,7 @@ export default function SplashScreen() {
       <StatusBar style="auto" />
       <Text style={styles.title}>Koperasi Syariah BMT Fatihul Barokah</Text>
       <Link href="/onboarding" style={styles.link}>
-        <Text style={styles.linkText}>Get Started</Text>
+        <Text style={styles.linkText}>Mulai</Text>
       </Link>
     </View>
   );
